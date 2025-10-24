@@ -12,8 +12,8 @@ public class CameraRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis ("Horizontal");
+        // float horizontalInput = Input.GetAxis ("Horizontal");
         //This makes the camera rotate on the horizontal access on the Focal Point with a determined speed
-        transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
+        //transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
     }
 }
