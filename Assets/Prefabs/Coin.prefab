@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8544823693981155244}
   - component: {fileID: 5609496326758504920}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Coin
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
