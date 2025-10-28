@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody EnemyRb;
     private GameObject player;
+    public GameObject enemyPrefab;
     float speed = 10.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,5 +17,10 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         EnemyRb.AddForce((player.transform.position - transform.position).normalized * speed);
+
+        if (transform.position.y < -1)
+        {
+            Destroy(enemyPrefab);
+        }
     }
 }

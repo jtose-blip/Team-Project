@@ -2,23 +2,44 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] Enemies;
+    public GameObject enemyPrefab; // Assign Prefab in inspector
+    public float spawnInterval = 3f; // Time (seconds) between a spawn
+    private float timer = 0f;
+    public int enemyCount = 1; // Number of enemies in the game
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        // Spawn the first wave of enemies
+        SpawnEnemyWave(enemyCount);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime; // Add the time passed since the last frame
+
+        if (timer >= spawnInterval) // Check if enough time has passed to spawn again
+        {
+            Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation); // Spawn one enemy
+
+            timer = 0f; // Reset the timer
+        }
     }
+
+    void SpawnEnemyWave(int enemiesToSpawn)
+    {
+        for (int i = 0; i < enemiesToSpawn; i++)
+        {
+            // Instantiate (create) an enemy at a random position
+            Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+        }
+    }
+
     private Vector3 GenerateSpawnPosition()
     {
         float spawnX = Random.Range(-7, 7);
-        float spawnY = Random.Range(-7, 7);
-        Vector3 RandomPosition = new Vector3(spawnX, spawnY, 0f);
+        float spawnZ = Random.Range(-7, 7);
+        Vector3 RandomPosition = new Vector3(spawnX, 0, spawnZ); // Y = 0 Keeps it on the ground
         return RandomPosition;
     }
 }
