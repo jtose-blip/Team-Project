@@ -9,14 +9,8 @@ public class CameraFollow : MonoBehaviour
     {
         if (target != null)
         {
-            // Update the camera's position to follow the target horizontally
-            transform.position = new Vector3(target.position.x, yOffset, zOffset);
-        }
-
-        else
-        {
-            // Update the camera's position to follow the target vertically
-            transform.position = new Vector3(xOffset, target.position.y, zOffset);
+            // Update the camera's position to follow the target horizontally and vertically
+            transform.position = new Vector3(target.position.x + xOffset, target.position.y + yOffset, target.position.z + zOffset); 
         }
 
         

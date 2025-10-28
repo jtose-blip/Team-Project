@@ -28,9 +28,9 @@ public class Enemy : MonoBehaviour
            Destroy(enemyPrefab); // if x is greater than 8, the enemy will despawn
         }
 
-        if (transform.position.z >= 8)
+        if (transform.position.z >= 17)
         {
-           Destroy(enemyPrefab); // if z is greater than 8, the enemy will despawn
+           Destroy(enemyPrefab); // if z is greater than 17, the enemy will despawn
         }
 
         if (transform.position.x <= -8)
