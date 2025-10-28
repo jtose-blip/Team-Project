@@ -12,6 +12,7 @@ public class SpawnManager : MonoBehaviour
     {
         // Spawn the first wave of enemies
         SpawnEnemyWave(enemyCount);
+        SpawnCollectable(1);
     }
 
     // Update is called once per frame
@@ -42,5 +43,13 @@ public class SpawnManager : MonoBehaviour
         float spawnZ = Random.Range(-7, 16);
         Vector3 RandomPosition = new Vector3(spawnX, 0, spawnZ); // Y = 0 Keeps it on the ground
         return RandomPosition;
+    }
+
+    void SpawnCollectable(int coinsToSpawn)
+    {
+        for (int i = 0; i < coinsToSpawn; i++)
+        {
+            Instantiate(coinPrefab, GenerateSpawnPosition(), coinPrefab.transform.rotation);
+        }
     }
 }

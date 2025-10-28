@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     public float jumpForce = 5.0f;
     public bool onGround = true;
+    public bool hasCollectable;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,6 +32,13 @@ public class PlayerController : MonoBehaviour
             onGround = false;
         }
 
+        if (transform.position.y < -5)
+        {
+            Destroy(gameObject);
+            Debug.Log("GAME OVER");
+            Time.timeScale = 0;
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -38,6 +46,15 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"));
         {
             onGround = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Coin"))
+        {
+            hasCollectable = true;
+            Destroy(other.gameObject);
         }
     }
 }
