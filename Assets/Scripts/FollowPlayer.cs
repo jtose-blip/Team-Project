@@ -18,5 +18,16 @@ public class CameraFollow : MonoBehaviour
             // Update the camera's position to follow the target vertically
             transform.position = new Vector3(xOffset, target.position.y, zOffset);
         }
+
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Powerup"))
+        {
+            hasPowerup = true;
+            Destroy(other.gameObject);
+        }
     }
 }
