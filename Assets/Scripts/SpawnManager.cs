@@ -3,6 +3,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject enemyPrefab; // Assign Prefab in inspector
+    public GameObject coinPrefab; // Spawns in coin objects
     public float spawnInterval = 3f; // Time (seconds) between a spawn
     private float timer = 0f;
     public int enemyCount = 1; // Number of enemies in the game
