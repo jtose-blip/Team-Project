@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,7 +22,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float forwardInput = Input.GetAxis ("Vertical");
-        player.AddForce (focalPoint.transform.forward * speed * forwardInput);
+        player.AddForce(Vector3.forward * speed * forwardInput);
         float horizontalInput = Input.GetAxis ("Horizontal");
         player.AddForce(focalPoint.transform.right * speed * horizontalInput);
 
