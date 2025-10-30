@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 270320209}
   m_Layer: 0
   m_Name: Slope
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 364225586}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 1308310218}
   m_Layer: 0
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,8 +1071,8 @@ GameObject:
   - component: {fileID: 1538826084}
   - component: {fileID: 1538826083}
   m_Layer: 0
-  m_Name: Slope (2)
-  m_TagString: Untagged
+  m_Name: Platform (4)
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1394,7 +1394,7 @@ GameObject:
   - component: {fileID: 2020667750}
   m_Layer: 0
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1660,8 +1660,8 @@ GameObject:
   - component: {fileID: 2046489186}
   - component: {fileID: 2046489185}
   m_Layer: 0
-  m_Name: Slope (1)
-  m_TagString: Untagged
+  m_Name: Platform (3)
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
