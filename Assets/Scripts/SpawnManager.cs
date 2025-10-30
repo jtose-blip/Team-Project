@@ -7,12 +7,13 @@ public class SpawnManager : MonoBehaviour
     public float spawnInterval = 3f; // Time (seconds) between a spawn
     private float timer = 0f;
     public int enemyCount = 1; // Number of enemies in the game
+    public int coinCount = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // Spawn the first wave of enemies
         SpawnEnemyWave(enemyCount);
-        SpawnCollectable(1);
+        SpawnCollectable(coinCount);
     }
 
     // Update is called once per frame
@@ -23,6 +24,13 @@ public class SpawnManager : MonoBehaviour
         if (timer >= spawnInterval) // Check if enough time has passed to spawn again
         {
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation); // Spawn one enemy
+
+            timer = 0f; // Reset the timer
+        }
+
+        if (timer >= spawnInterval) // Check if enough time has passed to spawn again
+        {
+            Instantiate(coinPrefab, GenerateSpawnPosition(), coinPrefab.transform.rotation); // Spawn one enemy
 
             timer = 0f; // Reset the timer
         }
