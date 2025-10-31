@@ -11,11 +11,14 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5.0f;
     public bool onGround = true;
     public bool hasCollectable;
+    private SpawnManager spawnManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GetComponent<Rigidbody>();
         focalPoint = GameObject.Find("Focal Point");
+
+        spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -57,6 +60,8 @@ public class PlayerController : MonoBehaviour
         {
             hasCollectable = true;
             Destroy(other.gameObject);
+
+            spawnManager.UpdateScore(5);
         }
     }
 }
