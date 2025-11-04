@@ -23,14 +23,14 @@ public class Enemy : MonoBehaviour
             Destroy(enemyPrefab);
         }
 
-        if (transform.position.x >= 8)
+        if (transform.position.x >= 15)
         {
            Destroy(enemyPrefab); // if x is greater than 8, the enemy will despawn
         }
 
-        if (transform.position.z >= 17)
+        if (transform.position.z >= 80)
         {
-           Destroy(enemyPrefab); // if z is greater than 17, the enemy will despawn
+           Destroy(enemyPrefab); // if z is greater than 80, the enemy will despawn
         }
 
         if (transform.position.x <= -8)
@@ -43,4 +43,13 @@ public class Enemy : MonoBehaviour
             Destroy(enemyPrefab); // if z is less than -8, the enemy will despawn
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            EnemyRb.AddForce(Vector3.up * 500f);
+        }
+    }
+
 }
