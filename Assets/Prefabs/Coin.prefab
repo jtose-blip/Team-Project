@@ -141,7 +141,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &686496014725330408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,9 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a0310b5d092e647a6114635e9cc30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 8818334397103857194, guid: 6f6d82fa3c36e634182a76ab4d0d00d6, type: 3}
   coinPrefab: {fileID: 1106232540219000676}
   spawnInterval: 3
   enemyCount: 1
-  coinCount: 1
+  coinCount: 2
+  areaSize: {x: 10, y: 1, z: 40}
   scoreText: {fileID: 0}
