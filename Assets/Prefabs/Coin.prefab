@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2593876620952855344}
   - component: {fileID: 8544823693981155244}
   - component: {fileID: 5609496326758504920}
-  - component: {fileID: 686496014725330408}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -142,22 +141,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
---- !u!114 &686496014725330408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106232540219000676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95a0310b5d092e647a6114635e9cc30a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  enemyPrefab: {fileID: 8818334397103857194, guid: 6f6d82fa3c36e634182a76ab4d0d00d6, type: 3}
-  coinPrefab: {fileID: 1106232540219000676}
-  spawnInterval: 3
-  enemyCount: 1
-  coinCount: 2
-  areaSize: {x: 10, y: 1, z: 40}
-  scoreText: {fileID: 0}

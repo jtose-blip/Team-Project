@@ -18,10 +18,10 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         // Spawn the first wave of enemies
-        SpawnEnemyWave(enemyCount); 
+        Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
 
         //spawn the coins 
-        SpawnCoins(); 
+        Instantiate(coinPrefab, GenerateSpawnPosition(), coinPrefab.transform.rotation);
 
         score = 0;
     }
