@@ -21,9 +21,10 @@ public class SpawnManager : MonoBehaviour
         Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
 
         //spawn the coins 
-        Instantiate(coinPrefab, GenerateSpawnPosition(), coinPrefab.transform.rotation);
+        SpawnCoins();
 
         score = 0;
+        UpdateScore(0);
     }
 
     // Update is called once per frame
@@ -46,7 +47,6 @@ public class SpawnManager : MonoBehaviour
         {
             // Instantiate (create) an enemy at a random position
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-            UpdateScore(5 );
         }
     }
 
@@ -77,6 +77,6 @@ public class SpawnManager : MonoBehaviour
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        scoreText.text = "Coins: " + score;
+        scoreText.text = "Score: " + score;
     }
 }

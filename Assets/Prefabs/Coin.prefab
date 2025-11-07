@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2593876620952855344}
   - component: {fileID: 8544823693981155244}
   - component: {fileID: 5609496326758504920}
+  - component: {fileID: 347135467643721023}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -141,3 +142,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
+--- !u!114 &347135467643721023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106232540219000676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3ed2feb1c386246a6b1007cb9bbbdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Collectable
